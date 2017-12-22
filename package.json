@@ -8,7 +8,7 @@
   "scripts": {
     "lint": "eslint src/ tests/",
     "release": "standard-version",
-    "prepare" : "npm run build",
+    "postinstall" : "npm run build",
     "pretest": "npm run lint && npm run build && npm run build:tests",
     "test": "mocha compiled_tests/",
     "test:nolint": "npm run build && npm run build:tests && mocha compiled_tests/",
